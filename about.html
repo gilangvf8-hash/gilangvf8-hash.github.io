@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tentang - Blog Saya</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1><a href="/">Blog Saya</a></h1>
+      <nav>
+        <a href="/">Beranda</a>
+        <a href="about.html">Tentang</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="repo-card">
+      <h2>Tentang Blog Ini</h2>
+      <p>Blog ini dibuat dengan GitHub Pages. Semua postingan ditulis sederhana menggunakan HTML.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      © <span id="year"></span> gilangvf8-hash
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
