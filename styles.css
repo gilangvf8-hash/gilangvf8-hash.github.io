@@ -1,4 +1,67 @@
-/* Reset dasar */
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f6f8fa;
+      color: #24292f;
+    }
+    header {
+      background: #24292f;
+      color: white;
+      padding: 15px 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+    .repo-info {
+      background: white;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    .repo-info h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .repo-info p {
+      margin: 8px 0 0;
+      color: #57606a;
+    }
+    .file-list {
+      background: white;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .file {
+      display: flex;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid #eaecef;
+    }
+    .file:last-child {
+      border-bottom: none;
+    }
+    .file span {
+      margin-left: 8px;
+      color: #0969da;
+    }
+    footer {
+      background: #24292f;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+    footer a {
+      color: #58a6ff;
+      text-decoration: none;
+      }/* Reset dasar */
 * {
   box-sizing: border-box;
   margin: 0;
