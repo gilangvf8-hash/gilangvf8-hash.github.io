@@ -1,1 +1,17 @@
 # gilangvf8-hash.github.io
+# Blog Saya di GitHub Pages
+
+📍 Alamat: [https://gilangvf8-hash.github.io/](https://gilangvf8-hash.github.io/)
+
+Struktur:
+- `index.html` → Halaman depan
+- `about.html` → Halaman tentang
+- `styles.css` → Style blog
+- `posts/` → Folder untuk semua artikel
+- `README.md` → Dokumentasi repo
+
+## Cara Tambah Postingan
+1. Copy salah satu file di folder `/posts`.
+2. Ubah nama file (contoh: `2025-09-15-artikel-baru.html`).
+3. Edit isi sesuai artikelmu.
+4. Tambah link ke `index.html` di daftar postingan.
