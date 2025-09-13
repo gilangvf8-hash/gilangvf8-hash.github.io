@@ -7,7 +7,7 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
+  
   <url>
     <loc>https://gilangvf8-hash.github.io/about.html</loc>
     <lastmod>2025-09-10</lastmod>
@@ -22,4 +22,10 @@
     <priority>0.7</priority>
   </url>
 
+    <url>
+    <loc>https://gilangvf8-hash.github.io/post/post2.html</loc>
+    <lastmod>2025-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
