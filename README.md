@@ -15,3 +15,8 @@ Struktur:
 2. Ubah nama file (contoh: `2025-09-15-artikel-baru.html`).
 3. Edit isi sesuai artikelmu.
 4. Tambah link ke `index.html` di daftar postingan.
+
+# Artikel
+1. [https://gilangvf8-hash.github.io/post/post1.html](https://gilangvf8-hash.github.io/post/post1.html)
+2. [Kenapa Xtgem Tidak Bisa Muncul di Google](https://gilangvf8-hash.github.io/post/post2.html)
+3. [Tentang Blog](https://gilangvf8-hash.github.io/post/post1.html) 
