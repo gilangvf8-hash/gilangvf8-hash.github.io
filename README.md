@@ -17,6 +17,6 @@ Struktur:
 4. Tambah link ke `index.html` di daftar postingan.
 
 # Artikel
-1. [https://gilangvf8-hash.github.io/post/post1.html](https://gilangvf8-hash.github.io/post/post1.html)
+1. [Kenapa Anggota Hizbut Tahrir Sering Gelisah](https://gilangvf8-hash.github.io/post/post1.html)
 2. [Kenapa Xtgem Tidak Bisa Muncul di Google](https://gilangvf8-hash.github.io/post/post2.html)
 3. [Tentang Blog](https://gilangvf8-hash.github.io/post/post1.html) 
