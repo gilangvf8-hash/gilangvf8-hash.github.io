@@ -4,4 +4,4 @@ theme: minima
 plugins:
   - jekyll-sitemap
   - jekyll-feed
-url: "https://gilangvf8-hash.github.io/"
+url: "https://gilangvf8-hash.github.io"
