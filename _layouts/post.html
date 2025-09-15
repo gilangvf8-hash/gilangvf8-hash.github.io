@@ -21,7 +21,7 @@
   }
   </script>
 
-  <style>
+ <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -35,7 +35,10 @@
       font-size: 20px;
       font-weight: bold;
     }
-    header a { color: white; text-decoration: none; }
+    header a {
+      color: white;
+      text-decoration: none;
+    }
     .container {
       max-width: 900px;
       margin: 20px auto;
@@ -48,8 +51,33 @@
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
       margin-bottom: 20px;
     }
-    .repo-info h1 { margin: 0; font-size: 24px; }
-    .repo-info p { margin: 8px 0 0; color: #57606a; }
+    .repo-info h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .repo-info p {
+      margin: 8px 0 0;
+      color: #57606a;
+    }
+    .file-list {
+      background: white;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .file {
+      display: flex;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid #eaecef;
+    }
+    .file:last-child {
+      border-bottom: none;
+    }
+    .file span {
+      margin-left: 8px;
+      color: #0969da;
+    }
     footer {
       background: #24292f;
       color: #fff;
@@ -58,7 +86,10 @@
       margin-top: 40px;
       font-size: 14px;
     }
-    footer a { color: #58a6ff; text-decoration: none; }
+    footer a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
