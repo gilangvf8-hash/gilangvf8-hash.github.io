@@ -3,3 +3,4 @@ description: Catatan dan artikel pribadi
 theme: minima
 plugins:
   - jekyll-sitemap
+  - jekyll-feed
