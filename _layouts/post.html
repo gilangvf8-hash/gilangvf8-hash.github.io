@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ page.title }}",
+    "author": { "@type": "Person", "name": "Gilang V F" },
+    "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
+    "publisher": { "@type": "Organization", "name": "{{ site.title }}" },
+    "image": "{{ site.url }}/gambar/g3.png"
+  }
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f6f8fa;
+      color: #24292f;
+    }
+    header {
+      background: #24292f;
+      color: white;
+      padding: 15px 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    header a { color: white; text-decoration: none; }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+    .repo-info {
+      background: white;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    .repo-info h1 { margin: 0; font-size: 24px; }
+    .repo-info p { margin: 8px 0 0; color: #57606a; }
+    footer {
+      background: #24292f;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+    footer a { color: #58a6ff; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="{{ site.url }}">{{ site.title }}</a>
+  </header>
+
+  <div class="container">
+    <div class="repo-info">
+      <h1>{{ page.title }}</h1>
+      {{ content }}
+      <p><strong>Dibuat oleh:</strong> Gilang V F</p>
+      <p>Tanggal: {{ page.date | date: "%d %B %Y" }}</p>
+    </div>
+  </div>
+
+  <footer>
+    © {{ site.time | date: "%Y" }} {{ site.title }} — Dibuat untuk dokumentasi dan edukasi.  
+    Lihat di <a href="https://github.com/gilangvf8-hash">GitHub</a>
+  </footer>
+</body>
+</html>
