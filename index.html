@@ -142,6 +142,17 @@
         📄 <span><a href="https://gilangvf8-hash.github.io/post/post2.html">Kenapa Xtgem Tidak Bisa Muncul di Google</a></span>
       </div>
     </div>
+    
+<div class="file-list">
+  {% for post in site.posts %}
+  <div class="file">
+    <span>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </span>
+    <small>({{ post.date | date: "%d %B %Y" }})</small>
+  </div>
+  {% endfor %}
+</div>
   </div>
 
   <footer>
