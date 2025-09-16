@@ -21,3 +21,18 @@ Struktur:
 2. [Kenapa Xtgem Tidak Bisa Muncul di Google](https://gilangvf8-hash.github.io/post/post2.html)
 3. [Tentang Blog](https://gilangvf8-hash.github.io/about.html) 
 4. [Kenapa Anggota Hizbut Tahrir Munafik](https://gilangvf8-hash.github.io/post/post3.html)
+
+---
+layout: default
+title: Home
+---
+
+<h1>Daftar Artikel</h1>
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>  
+      <small>{{ post.date | date: "%d %B %Y" }}</small>
+    </li>
+  {% endfor %}
+</ul>
