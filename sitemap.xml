@@ -15,6 +15,22 @@ layout: none
   {% endfor %}
 
   <!-- Untuk postingan blog -->
+    <url>
+<loc>https://gilangvf8-hash.github.io/post/post1.html</loc>
+<lastmod>2025-09-12T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://gilangvf8-hash.github.io/post/post2.html</loc>
+<lastmod>2025-09-13T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://gilangvf8-hash.github.io/post/post3.html</loc>
+<lastmod>2025-09-14T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://gilangvf8-hash.github.io/post/post4.html</loc>
+     <lastmod>2025-09-15T00:00:00+00:00</lastmod>
+    </url>
   {% for post in site.posts %}
     <url>
       <loc>{{ site.url }}{{ post.url }}</loc>
