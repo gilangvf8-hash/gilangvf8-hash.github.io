@@ -22,10 +22,7 @@ Struktur:
 3. [Tentang Blog](https://gilangvf8-hash.github.io/about.html) 
 4. [Kenapa Anggota Hizbut Tahrir Munafik](https://gilangvf8-hash.github.io/post/post3.html)
 
----
-layout: default
-title: Home
----
+
 
 <h1>Daftar Artikel</h1>
 <ul>
