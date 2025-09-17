@@ -4,8 +4,6 @@ title: "gilangvf8-hash / Keruntuhan Hizbut Tahrir"
 description: "Dokumentasi tentang keruntuhan Hizbut Tahrir"
 ---
 
-# Keruntuhan Hizbut Tahrir
-Ini menceritakan bagaimana Hizbut Tahrir tumbang.Versi md
 
 ## Daftar Posting
 <div class="file-list">
