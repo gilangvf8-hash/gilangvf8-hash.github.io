@@ -1,0 +1,2 @@
+- name: Create service account JSON
+  run: echo '${{ secrets.GSC_SERVICE_ACCOUNT }}' > gsc.json
