@@ -1,0 +1,24 @@
+name: Bing URL Submission
+
+on:
+  push:
+    branches:
+      - main   # ganti kalau branch utamamu bukan main
+  workflow_dispatch:
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Get sitemap URL
+        run: echo "SITEMAP_URL=https://gilangvf8-hash.github.io/sitemap.xml" >> $GITHUB_ENV
+
+      - name: Submit to Bing
+        run: |
+          curl -H "Content-Type: application/json" \
+               -H "Ocp-Apim-Subscription-Key: ${{ secrets.BING_API_KEY }}" \
+               -d "{\"siteUrl\": \"https://gilangvf8-hash.github.io\", \"urlList\":[\"$SITEMAP_URL\"]}" \
+               https://ssl.bing.com/webmaster/api.svc/json/SubmitUrlbatch?apikey=${{ secrets.BING_API_KEY }}
