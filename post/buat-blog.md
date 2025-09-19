@@ -1,3 +1,12 @@
+---
+layout: post
+title: "Langkah Langkah Membuat Folder Post di Github"
+description: "membuat folder di github"
+keywords: "Github, blog, artikel"
+date: 2025-09-19
+---
+
+
 Berikut langkah-langkah membuat folder **post** untuk blog di GitHub (misalnya menggunakan GitHub Pages dengan Jekyll):
 
 ### 1. Buka Repositori Blog
