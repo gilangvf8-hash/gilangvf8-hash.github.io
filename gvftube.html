@@ -1,6 +1,9 @@
 ---
 layout: post
 title: GVF Tube
+description: "Tempat Download Video Youtube"
+keywords: "Youtube, Boboiboy, Download Video"
+date: 2025-09-21
 ---
 
 <h2>Cari Video YouTube</h2>
@@ -14,17 +17,17 @@ title: GVF Tube
 <div id="results"></div>
 
 <hr>
-<h2>Video Default (Terbaru dari Channel)</h2>
+<h2>Video Default (Berdasarkan Keyword)</h2>
 <div id="defaultVideos"></div>
 
 <script>
 const apiKey = "AIzaSyCIqJPESJEipAsKfdIpumGu7yT77ZQARbI"; // YouTube Data API v3
 const maxResults = 5;
-const channelId = "UC_x5XG1OV2P6uZZ5FSM9Ttw"; // contoh: Google Developers channel
+const defaultKeyword = "Boboiboy"; // 🔹 Ganti sesuai keinginanmu
 
-// --- tampilkan video default dari channel ---
+// --- tampilkan video default dari keyword ---
 function loadDefaultVideos() {
-  fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=${maxResults}&channelId=${channelId}&order=date&key=${apiKey}`)
+  fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=${maxResults}&q=${encodeURIComponent(defaultKeyword)}&key=${apiKey}`)
     .then(res => res.json())
     .then(data => {
       let output = "";
