@@ -136,17 +136,15 @@
     </div>
   </div>
     <!-- Navigasi posting sebelumnya & selanjutnya -->
-    <div class="nav-links">
-      <div class="prev">
-        {% if page.previous %}
-          ⬅️ <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
-        {% endif %}
+    <div class="related-posts file-list">
+  <h2>Postingan Lainnya</h2>
+  {% for post in site.posts limit:3 %}
+    {% if post.url != page.url %}
+      <div class="file">
+        📄 <span><a href="{{ post.url | relative_url }}">{{ post.title }}</a></span>
       </div>
-      <div class="next">
-        {% if page.next %}
-          <a href="{{ page.next.url }}">{{ page.next.title }}</a> ➡️
-        {% endif %}
-      </div>
+    {% endif %}
+  {% endfor %}
     </div>
 
   <footer>
