@@ -1,0 +1,82 @@
+---
+layout: default
+title: Pencarian YouTube
+---
+
+<h2>Cari Video YouTube</h2>
+<form id="searchForm">
+  <input type="text" id="searchQuery" placeholder="Masukkan kata kunci">
+  <button type="submit">Cari</button>
+</form>
+<hr>
+
+<h2>Hasil Pencarian</h2>
+<div id="results"></div>
+
+<hr>
+<h2>Video Default (Terbaru dari Channel)</h2>
+<div id="defaultVideos"></div>
+
+<script>
+const apiKey = "AIzaSyCIqJPESJEipAsKfdIpumGu7yT77ZQARbI"; // YouTube Data API v3
+const maxResults = 5;
+const channelId = "UC_x5XG1OV2P6uZZ5FSM9Ttw"; // contoh: Google Developers channel
+
+// --- tampilkan video default dari channel ---
+function loadDefaultVideos() {
+  fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=${maxResults}&channelId=${channelId}&order=date&key=${apiKey}`)
+    .then(res => res.json())
+    .then(data => {
+      let output = "";
+      data.items.forEach(item => {
+        const videoId = item.id.videoId;
+        const title = item.snippet.title;
+        const thumb = item.snippet.thumbnails.medium.url;
+        output += `
+          <div class="video">
+            <h3>${title}</h3>
+            <a href="video.html?id=${videoId}">
+              <img src="${thumb}" alt="${title}">
+            </a>
+          </div>
+        `;
+      });
+      document.getElementById("defaultVideos").innerHTML = output;
+    })
+    .catch(err => console.error(err));
+}
+
+// --- fungsi pencarian ---
+function searchYouTube(query) {
+  fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=${maxResults}&q=${encodeURIComponent(query)}&key=${apiKey}`)
+    .then(res => res.json())
+    .then(data => {
+      let output = "";
+      data.items.forEach(item => {
+        const videoId = item.id.videoId;
+        const title = item.snippet.title;
+        const thumb = item.snippet.thumbnails.medium.url;
+        output += `
+          <div class="video">
+            <h3>${title}</h3>
+            <a href="video.html?id=${videoId}">
+              <img src="${thumb}" alt="${title}">
+            </a>
+          </div>
+        `;
+      });
+      document.getElementById("results").innerHTML = output;
+    })
+    .catch(err => console.error(err));
+}
+
+// --- event form pencarian ---
+document.getElementById("searchForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  const query = document.getElementById("searchQuery").value;
+  searchYouTube(query);
+});
+
+// --- jalankan video default saat load halaman ---
+loadDefaultVideos();
+</script>
