@@ -144,6 +144,19 @@
       <p>Tanggal: {{ page.date | date: "%d %B %Y" }}</p>
     </div>
   </div>
+    <!-- Navigasi posting sebelumnya & selanjutnya -->
+    <div class="nav-links">
+      <div class="prev">
+        {% if page.previous %}
+          ⬅️ <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
+        {% endif %}
+      </div>
+      <div class="next">
+        {% if page.next %}
+          <a href="{{ page.next.url }}">{{ page.next.title }}</a> ➡️
+        {% endif %}
+      </div>
+    </div>
 
   <footer>
     © {{ site.time | date: "%Y" }} {{ site.title }} — Dibuat untuk dokumentasi dan edukasi.  
