@@ -4,27 +4,55 @@ title: Tonton Video
 ---
 
 <div id="video-container"></div>
+<div id="video-info"></div>
 
-<h3>Link Download (pihak ketiga)</h3>
+<h3>Unduh Video</h3>
 <p>
-  ⚠️ YouTube API <b>tidak menyediakan link download</b>.  
-  Jika ingin download, gunakan layanan pihak ketiga seperti:
-  <br>
-  <a id="y2mate" target="_blank">Download via Y2Mate</a> |
-  <a id="savefrom" target="_blank">Download via SaveFrom</a>
+  <a id="downloadLink" href="#">Klik di sini untuk download</a>
 </p>
 
 <script>
 const params = new URLSearchParams(window.location.search);
 const videoId = params.get("id");
 
+// 🔑 API Key dari Google Cloud Console (YouTube Data API v3)
+const API_KEY = "AIzaSyCIqJPESJEipAsKfdIpumGu7yT77ZQARbI";
+
 if(videoId){
+  // Tampilkan player
   document.getElementById("video-container").innerHTML = `
     <h2>Tonton Video</h2>
-    <iframe width="300" height="200" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" 
+      src="https://www.youtube.com/embed/${videoId}" 
+      frameborder="0" allowfullscreen>
+    </iframe>
   `;
-  document.getElementById("y2mate").href = `https://www.y2mate.com/youtube/${videoId}`;
-  document.getElementById("savefrom").href = `https://ssyoutube.com/watch?v=${videoId}`;
+  
+  // Update link download
+  document.getElementById("downloadLink").href = `download.html?id=${videoId}`;
+
+  // Fetch detail video (judul, deskripsi, channel)
+  fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=${videoId}&key=${API_KEY}`)
+    .then(res => res.json())
+    .then(data => {
+      if(data.items && data.items.length > 0){
+        const video = data.items[0].snippet;
+        const stats = data.items[0].statistics;
+
+        document.getElementById("video-info").innerHTML = `
+          <h3>${video.title}</h3>
+          <p><b>Channel:</b> ${video.channelTitle}</p>
+          <p><b>Deskripsi:</b><br>${video.description.replace(/\n/g,"<br>")}</p>
+          <p><b>Views:</b> ${stats.viewCount}</p>
+        `;
+      } else {
+        document.getElementById("video-info").innerHTML = "<p>Informasi video tidak ditemukan.</p>";
+      }
+    })
+    .catch(err => {
+      document.getElementById("video-info").innerHTML = "<p>Error: " + err + "</p>";
+    });
+
 }else{
   document.getElementById("video-container").innerHTML = "<p>Video tidak ditemukan.</p>";
 }
