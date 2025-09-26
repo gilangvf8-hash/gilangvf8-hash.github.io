@@ -25,10 +25,10 @@ description: "Dokumentasi tentang keruntuhan Hizbut Tahrir"
         📄 <span><a href="https://gilangvf8-hash.github.io/post/post2.html">Kenapa Xtgem Tidak Bisa Muncul di Google</a></span>
       </div>
 </div>
-<header>
-    <h1>Blogku</h1>
-    <p>Artikel terbaru dari Medium</p>
-  </header>
+
+    
+    ## Artikel terbaru dari Medium
+  
   <div class="container">
     <div class="repo-info">
   <main>
@@ -36,9 +36,7 @@ description: "Dokumentasi tentang keruntuhan Hizbut Tahrir"
   </main>
 </div>
   </div>
-  <footer>
-    <p>© 2025 Dibuat dengan ❤️ di GitHub Pages</p>
-  </footer>
+  
 
   <script>
     async function loadMedium() {
