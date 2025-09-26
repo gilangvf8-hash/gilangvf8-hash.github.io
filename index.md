@@ -27,7 +27,7 @@ description: "Dokumentasi tentang keruntuhan Hizbut Tahrir"
 </div>
 
     
-    ## Artikel terbaru dari Medium
+  ## Artikel terbaru dari Medium
   
   <div class="container">
     <div class="repo-info">
