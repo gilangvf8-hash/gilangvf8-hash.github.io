@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: main   # atau 'master' sesuai default repo
+
+media_folder: "static/images/uploads"  # tempat simpan gambar
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
