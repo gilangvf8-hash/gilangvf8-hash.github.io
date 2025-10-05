@@ -26,4 +26,27 @@ description: "Dokumentasi tentang keruntuhan Hizbut Tahrir"
       </div>
 </div>
 
-    
+      <h1>Artikel Terbaru dari gilangvf.com.free</h1>
+  <div id="posts" class="posts">Memuat…</div>
+  <footer>Otomatis diupdate via GitHub Actions • <a href="https://gilangvf.com.free/" target="_blank">Sumber Asli</a></footer>
+
+<script>
+(async()=>{
+  const el = document.getElementById("posts");
+  try {
+    const res = await fetch("posts.json");
+    const posts = await res.json();
+    if(!posts.length) { el.textContent = "Belum ada artikel."; return; }
+
+    el.innerHTML = "";
+    posts.forEach(p=>{
+      const div = document.createElement("div");
+      div.className = "card";
+      div.innerHTML = `<a href="${p.link}" target="_blank">${p.title}</a>`;
+      el.appendChild(div);
+    });
+  } catch(e){
+    el.textContent = "Gagal memuat posts.json";
+  }
+})();
+</script>
