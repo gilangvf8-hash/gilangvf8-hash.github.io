@@ -10,7 +10,8 @@ const OUTPUT = "posts.json";
   try {
     console.log(`🔍 Mengambil artikel dari ${TARGET} ...`);
     const res = await fetch(TARGET);
-    const html = await res.text();
+if (!res.ok) throw new Error(`HTTP ${res.status}`);
+const html = await res.text();
 
     const dom = new JSDOM(html);
     const doc = dom.window.document;
