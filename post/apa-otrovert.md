@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Apa Itu Introvert?"
+title: "Apa Itu Otrovert?"
 description: "Istilah otrovert diperkenalkan oleh Rami Kaminski, seorang psikiater yang mendirikan Otherness Institute"
 keywords: "kepribadian, blog, artikel"
 date: 2025-11-05
