@@ -1,0 +1,61 @@
+---
+layout: post
+title: "Apa Itu Otrovert?"
+description: "Istilah otrovert diperkenalkan oleh Rami Kaminski, seorang psikiater yang mendirikan Otherness Institute"
+keywords: "kepribadian, blog, artikel"
+date: 2025-11-05
+---
+
+Otrovert
+
+Ya — ternyata istilah otrovert memang muncul dalam artikel-bahasa Inggris dan bukan hanya salah ketik. Berikut rangkuman pengertiannya, plus catatan pentingnya kalau kamu mempertimbangkan istilah ini.
+
+
+---
+
+🔍 Pengertian
+
+Istilah otrovert diperkenalkan oleh Rami Kaminski, seorang psikiater yang mendirikan Otherness Institute. 
+Kata tersebut berasal dari “otro” (bahasa Spanyol untuk “lain”/“yang lain”) dan “-vert” (dari Latin vertere yang artinya “membalik/menoleh”). 
+Menurut definisinya:
+
+> Seorang otrovert “embodies the personality trait of ‘otherness’ … remaining an eternal outsider …” 
+
+
+
+Artinya secara singkat: otrovert adalah tipe kepribadian yang tidak merasa benar‐benar ‘bagian dari’ kelompok sosial pada tingkat emosional atau identitas kolektif, walaupun bisa tampak sangat sosial atau “normal” dari luar. 
+
+
+---
+
+✅ Ciri‐ciri utama
+
+Beberapa karakteristik yang sering disebutkan untuk orang yang mungkin “otrovert”:
+
+Mereka bisa sangat empatik dan bersahabat, mampu menjalin hubungan individu ke individu yang mendalam. 
+
+Namun mereka tidak merasa bahwa mereka “termasuk” atau “berafiliasi” dengan kelompok besar, komunitas, identitas sosial, ideologi, atau “herd mentality”. 
+
+Mereka lebih nyaman dalam setting satu-satu atau dengan sedikit orang daripada di kerumunan besar atau dalam kelompok yang menuntut konsensus. 
+
+Mereka punya pemikiran yang lebih independen, tidak mudah terbawa opini mayoritas, dan kadang-kadang menghasilkan ide yang “berbeda”. 
+
+Mereka mungkin merasa “lain” atau “terasing” dari norma sosial, tapi bukan karena gangguan psikologis; lebih karena orientasi relasi sosial yang berbeda. 
+
+
+
+---
+
+⚠️ Catatan penting
+
+Istilah ini relatif baru, belum masuk ke banyak buku psikologi standar atau diagnostik resmi. 
+
+Tidak semua orang yang merasa “tidak cocok dengan kelompok” otomatis adalah otrovert — bisa juga karena faktor lain (kepribadian introvert, kondisi sosial, pengalaman trauma, preferensi individu, dll).
+
+Karena belum sangat baku, istilah ini sebaiknya dipakai sebagai alat refleksi dan pemahaman diri, bukan label yang pasti atau men-diagnosa.
+
+
+
+---
+
+Jika kamu mau, saya bisa cari bahasa Indonesia untuk “otrovert” atau padanan yang cocok di konteks kita — mau saya cari?
