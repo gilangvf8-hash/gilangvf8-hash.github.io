@@ -54,7 +54,7 @@
   {% for post in site.posts limit:3 %}
     {% if post.url != page.url %}
       <div class="file">
-         <span><a href="{{ post.url | relative_url }}">{{ post.title }}</a></span>
+       ♦  <span><a href="{{ post.url | relative_url }}">{{ post.title }}</a></span>
       </div>
     {% endif %}
   {% endfor %}
