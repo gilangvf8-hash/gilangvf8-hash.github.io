@@ -45,32 +45,7 @@
     </section>
 
     <!-- Related posts (by first tag) -->
-    <aside class="related-posts card" aria-label="Artikel terkait">
-      <div style="padding:18px;">
-        <h2>Artikel terkait</h2>
-
-        {% assign show_related = false %}
-        {% if page.tags and page.tags.size > 0 %}
-          {% assign tag = page.tags | first %}
-          {% assign posts_with_tag = site.tags[tag] | where_exp: "p", "p.url != page.url" %}
-          {% if posts_with_tag and posts_with_tag.size > 0 %}
-            {% assign show_related = true %}
-            <div class="related-list" style="margin-top:12px;">
-              {% for p in posts_with_tag limit:3 %}
-                <a class="related-item" href="{{ p.url | relative_url }}" title="{{ p.title }}">
-                  <div class="rtitle">{{ p.title }}</div>
-                  <div class="rmeta">{{ p.date | date: "%-d %b %Y" }} • {{ p.excerpt | strip_html | truncate: 80 }}</div>
-                </a>
-              {% endfor %}
-            </div>
-          {% endif %}
-        {% endif %}
-
-        {% unless show_related %}
-          <p style="color:#6b7280; margin-top:12px;">Tidak ada artikel terkait untuk ditampilkan. Coba tambahkan tag pada artikel lain agar bagian ini dapat menampilkan rekomendasi.</p>
-        {% endunless %}
-      </div>
-    </aside>
+    
   </main>
 
     <!-- Navigasi posting sebelumnya & selanjutnya -->
@@ -79,7 +54,7 @@
   {% for post in site.posts limit:3 %}
     {% if post.url != page.url %}
       <div class="file">
-        📄 <span><a href="{{ post.url | relative_url }}">{{ post.title }}</a></span>
+         <span><a href="{{ post.url | relative_url }}">{{ post.title }}</a></span>
       </div>
     {% endif %}
   {% endfor %}
