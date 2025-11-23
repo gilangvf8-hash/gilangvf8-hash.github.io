@@ -17,7 +17,7 @@
       <div>
         <h1 itemprop="headline">{{ page.title }}</h1>
         <div class="post-meta">
-          <span class="by">Oleh {% if page.author %}{{ page.author }}{% elsif site.author %}{{ site.author.name | default: site.author }}{% else %}Penulis{% endif %}</span>
+          <span class="by">Oleh {% if page.author %}{{ page.author }}{% elsif site.author %}{{ site.author.name | default: site.author }}{% else %}Gilang V F{% endif %}</span>
           • <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
           {% if page.categories and page.categories.size > 0 %} • <span style="color:#0969da; font-weight:600">{{ page.categories | join: ", " }}</span>{% endif %}
         </div>
