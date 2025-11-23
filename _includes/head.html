@@ -192,6 +192,61 @@ a:focus, button:focus, .file:focus {
   header { font-size: 16px; padding: 12px 14px; }
   .container { padding: 0 14px; margin: 18px auto; }
  }
-     
+  /* ===== STYLE PRE & CODE ===== */
+pre {
+  background: #f7f7f8;
+  border: 1px solid #e5e5e7;
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  overflow-x: auto;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+/* Batasi lebarnya agar layout tetap anggun */
+.post-content pre {
+  max-width: 100%;
+}
+
+/* Style untuk <code> di dalam <pre> */
+pre code {
+  font-family: "JetBrains Mono", "Fira Code", "Consolas", monospace;
+  color: #2a2a2e;
+  font-size: 0.95rem;
+  white-space: pre;
+}
+
+/* Style untuk inline code: `contoh` */
+code {
+  background: #f0f0f1;
+  padding: 2px 6px;
+  border-radius: 6px;
+  border: 1px solid #e5e5e7;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 0.9em;
+  color: #d6336c; /* warna elegan tidak mencolok */
+}
+
+/* Highlight warna untuk teks tertentu (opsional) */
+.token.keyword { color: #0070f3; }
+.token.string  { color: #0a7e07; }
+.token.comment { color: #8a8f99; font-style: italic; }
+.token.number  { color: #d6336c; }
+.token.tag     { color: #b32dff; }
+
+/* Scrollbar agar lebih halus */
+pre::-webkit-scrollbar {
+  height: 8px;
+}
+pre::-webkit-scrollbar-track {
+  background: #eee;
+  border-radius: 10px;
+}
+pre::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+  }   
  </style>
 
