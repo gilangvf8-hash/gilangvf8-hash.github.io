@@ -222,14 +222,69 @@ a:focus, button:focus, .related-item:focus {
 <body>
   {% include header.html %}
 <br>
-  <div class="container">
-    <div class="repo-info">
-      <h1>{{ page.title }}</h1>
-      {{ content }}
-      <p><strong>Dibuat oleh:</strong> Gilang V F</p>
-      <p>Tanggal: {{ page.date | date: "%d %B %Y" }}</p>
+    <!-- Page container -->
+  <main class="container" role="main">
+    <!-- Post header -->
+    <article class="card repo-info" itemscope itemtype="http://schema.org/Article">
+      <div>
+        <h1 itemprop="headline">{{ page.title }}</h1>
+        <div class="post-meta">
+          <span class="by">Oleh {% if page.author %}{{ page.author }}{% elsif site.author %}{{ site.author.name | default: site.author }}{% else %}Penulis{% endif %}</span>
+          • <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+          {% if page.categories and page.categories.size > 0 %} • <span style="color:#0969da; font-weight:600">{{ page.categories | join: ", " }}</span>{% endif %}
+        </div>
+      </div>
+
+      <div style="text-align:right;">
+        {% if page.reading_time %}
+          <div style="color:#6b7280; font-weight:600;">{{ page.reading_time }} menit baca</div>
+        {% endif %}
+      </div>
+    </article>
+
+    <!-- Cover image -->
+    {% if page.image %}
+    <div class="post-cover">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title }} — cover image" />
     </div>
-  </div>
+    {% endif %}
+
+    <!-- Post content -->
+    <section class="file-list card">
+      <div class="post-content" itemprop="articleBody">
+        {{ content }}
+      </div>
+    </section>
+
+    <!-- Related posts (by first tag) -->
+    <aside class="related-posts card" aria-label="Artikel terkait">
+      <div style="padding:18px;">
+        <h2>Artikel terkait</h2>
+
+        {% assign show_related = false %}
+        {% if page.tags and page.tags.size > 0 %}
+          {% assign tag = page.tags | first %}
+          {% assign posts_with_tag = site.tags[tag] | where_exp: "p", "p.url != page.url" %}
+          {% if posts_with_tag and posts_with_tag.size > 0 %}
+            {% assign show_related = true %}
+            <div class="related-list" style="margin-top:12px;">
+              {% for p in posts_with_tag limit:3 %}
+                <a class="related-item" href="{{ p.url | relative_url }}" title="{{ p.title }}">
+                  <div class="rtitle">{{ p.title }}</div>
+                  <div class="rmeta">{{ p.date | date: "%-d %b %Y" }} • {{ p.excerpt | strip_html | truncate: 80 }}</div>
+                </a>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endif %}
+
+        {% unless show_related %}
+          <p style="color:#6b7280; margin-top:12px;">Tidak ada artikel terkait untuk ditampilkan. Coba tambahkan tag pada artikel lain agar bagian ini dapat menampilkan rekomendasi.</p>
+        {% endunless %}
+      </div>
+    </aside>
+  </main>
+
     <!-- Navigasi posting sebelumnya & selanjutnya -->
     <div class="related-posts file-list">
   <h2>Postingan Lainnya</h2>
