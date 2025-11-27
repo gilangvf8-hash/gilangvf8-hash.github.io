@@ -4,7 +4,7 @@
 
 📍 Alamat: [https://gilangvf8-hash.github.io/](https://gilangvf8-hash.github.io/)
 
-Alamat ke 2:[https://gilangvf8.netlify.app](https://gilangvf8.netlyfy.app) 
+Alamat ke 2:[https://gilangvf8.netlify.app](https://gilangvf8.netlify.app) 
 
 Struktur:
 - `index.html` → Halaman depan
