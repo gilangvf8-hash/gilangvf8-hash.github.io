@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gilangvf8.netlify.app/sitemap.xml
+Sitemap: https://gilangvf8-hash.github.io/sitemap.xml
