@@ -8,7 +8,7 @@ keywords: "GitHub, Web, Situs, Blog"
 
 ## Daftar Posting
 <div class="file-list">
-  {% for post in site.posts %}
+  {% for post in site.posts limit:5 %}
     <div class="file">
       📄 <span><a href="{{ post.url | relative_url }}">{{ post.title }}</a></span>
     </div>
