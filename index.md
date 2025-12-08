@@ -13,6 +13,17 @@ keywords: "GitHub, Web, Situs, Blog"
       📄 <span><a href="{{ post.url | relative_url }}">{{ post.title }}</a></span>
     </div>
   {% endfor %}
+  <div class="file">
+        📄 <span><a href="https://gilangvf8-hash.io/post/post4.html">Kenapa Anggota Hizbut Tahrir Bisa Merasa Tersinggung Ketika Mendengar Kata Munafik</a></span>
+      </div>
+      <div class="file">
+        📄 <span><a href="https://gilangvf8-hash.github.io/post/post3.html">Kenapa Anggota Hizbut Tahrir Munafik</a></span>
+      </div><div class="file">
+        📄 <span><a href="https://gilangvf8-hash.github.io/post/post1.html">Kenapa Anggota Hizbut Tahrir Sering Gelisah</a></span>
+      </div>
+      <div class="file">
+        📄 <span><a href="https://gilangvf8-hash.github.io/post/post2.html">Kenapa Xtgem Tidak Bisa Muncul di Google</a></span>
+      </div>
 </div>
 
 <!-- Area untuk navigasi halaman -->
@@ -65,24 +76,3 @@ keywords: "GitHub, Web, Situs, Blog"
     showPage(1); // Tampilkan halaman 1 saat pertama kali
   });
   </script>
-
-
-
-
-  
-<div class="file-list">
-  <div class="file">
-        📄 <span><a href="https://gilangvf8-hash.io/post/post4.html">Kenapa Anggota Hizbut Tahrir Bisa Merasa Tersinggung Ketika Mendengar Kata Munafik</a></span>
-      </div>
-      <div class="file">
-        📄 <span><a href="https://gilangvf8-hash.github.io/post/post3.html">Kenapa Anggota Hizbut Tahrir Munafik</a></span>
-      </div>
-      <div class="file">
-        📄 <span><a href="https://gilangvf8-hash.github.io/post/post1.html">Kenapa Anggota Hizbut Tahrir Sering Gelisah</a></span>
-      </div>
-      <div class="file">
-        📄 <span><a href="https://gilangvf8-hash.github.io/post/post2.html">Kenapa Xtgem Tidak Bisa Muncul di Google</a></span>
-      </div>
-</div>
-
- 
