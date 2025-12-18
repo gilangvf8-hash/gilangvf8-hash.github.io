@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "gilangvf8-hash / Keruntuhan Hizbut Tahrir"
+title: "gilangvf8-hash"
 description: "Dokumentasi tentang keruntuhan Hizbut Tahrir"
 keywords: "GitHub, Web, Situs, Blog"
 ---
