@@ -68,7 +68,7 @@ keywords: "GitHub, Web, Situs, Blog"
   });
   </script><div class="file-list">
   <div class="file">
-        📄 <span><a href="https://gilangvf8-hash.io/post/post4.html">Kenapa Anggota Hizbut Tahrir Bisa Merasa Tersinggung Ketika Mendengar Kata Munafik</a></span>
+        📄 <span><a href="https://gilangvf8-hash.github.io/post/post4.html">Kenapa Anggota Hizbut Tahrir Bisa Merasa Tersinggung Ketika Mendengar Kata Munafik</a></span>
       </div>
       <div class="file">
         📄 <span><a href="https://gilangvf8-hash.github.io/post/post3.html">Kenapa Anggota Hizbut Tahrir Munafik</a></span>
