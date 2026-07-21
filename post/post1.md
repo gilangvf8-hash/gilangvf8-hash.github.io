@@ -6,7 +6,6 @@ keywords: "Hizbut Tahrir"
 date: 2026-07-21
 ---
 
-# Kenapa Anggota Hizbut Tahrir Sering Gelisah
     
 
 <br/><img src="https://gilangvf8-hash.github.io/gambar/g1.jpg" alt="Gambar hizbut tahri gelisah" width="300" /><br>
