@@ -3,31 +3,64 @@ name: IndexNow Sitemap Submission
 on:
   push:
     branches:
-      - main   # sesuaikan dengan branch GitHub Pages kamu (main/master)
+      - main
 
 jobs:
   submit-to-indexnow:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Extract URLs from sitemap and submit to IndexNow
+      - name: Setup Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Submit sitemap URLs to IndexNow
+        env:
+          SITEMAP: https://gilangvf8-hash.github.io/sitemap.xml
+          HOST: gilangvf8-hash.github.io
+          API_KEY: 77a3acba077848458350759957d374a1
         run: |
-          # Ganti sesuai URL sitemap kamu
-          SITEMAP="https://gilangvf8-hash.github.io/sitemap.xml"
-          API_KEY="77a3acba077848458350759957d374a1"
+          node <<'EOF'
+          const sitemap = process.env.SITEMAP;
+          const host = process.env.HOST;
+          const key = process.env.API_KEY;
 
-          # Ambil semua <loc> dari sitemap
-          URLS=$(curl -s $SITEMAP | grep -oP '(?<=<loc>).*?(?=</loc>)')
+          async function main() {
+            const res = await fetch(sitemap);
+            const xml = await res.text();
 
-          # Buat JSON array urlList
-          URL_JSON=$(printf '"%s",' $URLS | sed 's/,$//')
+            const urls = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map(m => m[1]);
 
-          # Kirim ke IndexNow
-          curl -H "Content-Type: application/json; charset=utf-8" -X POST "https://api.indexnow.org/IndexNow" -d "{
-            \"host\": \"gilangvf8-hash.github.io\",
-            \"key\": \"$API_KEY\",
-            \"keyLocation\": \"https://gilangvf8-hash.github.io/$API_KEY.txt\",
-            \"urlList\": [ $URL_JSON ]
-          }"
+            if (urls.length === 0) {
+              console.log("Tidak ada URL ditemukan di sitemap.");
+              return;
+            }
+
+            const payload = {
+              host,
+              key,
+              keyLocation: `https://${host}/${key}.txt`,
+              urlList: urls
+            };
+
+            const response = await fetch("https://api.indexnow.org/IndexNow", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json; charset=utf-8"
+              },
+              body: JSON.stringify(payload)
+            });
+
+            console.log("Status:", response.status);
+            console.log(await response.text());
+          }
+
+          main().catch(err => {
+            console.error(err);
+            process.exit(1);
+          });
+          EOF
