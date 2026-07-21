@@ -1,6 +1,10 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 4.3.2"
-gem "jekyll-sitemap"
 gem "minima", "~> 2.5"
 gem "webrick"
+gem "jekyll-seo-tag"
+gem "jekyll-sitemap"
+gem "jekyll-feed"
+gem "jekyll-paginate"
+gem "jekyll-redirect-from"
