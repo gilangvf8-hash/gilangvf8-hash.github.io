@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Kesalahan Hizbut Tahrir Menurut Kepribadian MBTI Turbulence"
+permalink: /kesalahan-ht-menurut-turbulen
+redirect_from: /2025/11/06/kesalahanhtotrovert.html
 description: "Menarik sekali pertanyaannya. Kalau kita membahas kesalahan Hizbut Tahrir (HT) dari perspektif kepribadian MBTI tipe Turbulent (T), maka kita berbicara tentang gaya emosional, cara bereaksi terhadap tekanan, dan kebutuhan akan kontrol sosial atau validasi eksternal yang khas pada tipe ini.
 "
 keywords: "Hizbut Tahrir, Munafik, Identitas, Psikologi, Khilafah"
