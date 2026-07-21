@@ -3,7 +3,7 @@
 # Blog Saya di GitHub Pages
 
 📍 Alamat: [https://gilangvf8-hash.github.io/](https://gilangvf8-hash.github.io/)
-[https://gilangvf.netlify.app](gilangvf.netlify.app) 
+[https://gilangvf.netlify.app](https://gilangvf.netlify.app) 
 
 
 Struktur:
