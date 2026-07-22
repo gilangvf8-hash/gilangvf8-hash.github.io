@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "gilangvf8-hash"
 permalink: /index.html
 description: "Dokumentasi tentang keruntuhan Hizbut Tahrir"
