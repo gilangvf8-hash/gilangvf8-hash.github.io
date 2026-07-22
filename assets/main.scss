@@ -3,181 +3,169 @@
 
 @import "minima";
 
+/* ===== Tambahan Tema Minima ===== */
 
-/* ===== Base ===== */
-*,
-*::before,
-*::after { box-sizing: border-box; }
+$brand-color: #2a7ae2;
+$text-color: #333;
+$background-color: #fdfdfd;
+$border-color: #e8e8e8;
 
-body{
-  margin:0;
-  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-  font-size:16px;
-  line-height:1.6;
-  color:#0f1720;
-  background:linear-gradient(#f6f8fa,#fff);
-  -webkit-font-smoothing:antialiased;
-}
-
-/* ===== Layout ===== */
+/* Layout */
 .container{
-  max-width:980px;
-  margin:24px auto;
-  padding:0 16px;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
-/* ===== Header ===== */
-header{
-  position:sticky;
-  top:0;
-  z-index:40;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:14px 20px;
-  font-weight:600;
-  color:#fff;
-  background:linear-gradient(rgba(14,20,26,.95),rgba(36,41,47,.97));
-  backdrop-filter:blur(6px);
-}
-header a{color:inherit;text-decoration:none}
-header a:hover{text-decoration:underline}
-
-/* ===== Card ===== */
+/* Card */
 .card{
   background:#fff;
-  padding:20px;
+  border:1px solid $border-color;
   border-radius:10px;
-  box-shadow:0 4px 12px rgba(0,0,0,.05);
-  transition:.2s ease;
-}
-.card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 10px 24px rgba(0,0,0,.08);
+  padding:1.5rem;
+  margin-bottom:1.5rem;
+  box-shadow:0 2px 8px rgba(0,0,0,.05);
+  transition:.2s;
 }
 
-/* ===== Repo / Post Header ===== */
-.repo-info{
-  display:grid;
-  grid-template-columns:1fr auto;
-  gap:12px;
-  margin-bottom:16px;
+.card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
 }
+
+/* Repo Info */
+.repo-info{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:1rem;
+  margin-bottom:1.5rem;
+}
+
 .repo-info h1{
   margin:0;
-  font-size:28px;
-  line-height:1.2;
-}
-.post-meta{
-  font-size:14px;
-  color:#6b7280;
+  color:$text-color;
 }
 
-/* ===== File List ===== */
-.file-list{
-  background:#fff;
-  padding:14px;
-  border-radius:10px;
-  box-shadow:0 4px 10px rgba(0,0,0,.05);
+.post-meta{
+  color:#828282;
+  font-size:.9rem;
 }
+
+/* File List */
+.file-list{
+  border:1px solid $border-color;
+  border-radius:8px;
+  overflow:hidden;
+}
+
 .file{
   display:grid;
-  grid-template-columns:28px 1fr auto;
+  grid-template-columns:30px 1fr auto;
   gap:12px;
-  padding:12px;
-  border-radius:8px;
+  padding:14px;
   text-decoration:none;
-  color:inherit;
-  transition:.15s ease;
+  color:$text-color;
+  border-bottom:1px solid $border-color;
+  transition:background .2s;
 }
-.file + .file{margin-top:8px}
-.file:hover{
-  background:rgba(9,105,218,.05);
-  transform:translateY(-2px);
-}
-.file .icon{
-  display:grid;
-  place-items:center;
-  font-size:13px;
-  font-weight:600;
-  background:rgba(9,105,218,.1);
-  color:#0969da;
-  border-radius:6px;
-}
-.file .name{font-weight:600}
-.file .meta,
-.file .size{font-size:13px;color:#6b7280}
 
-/* ===== Article Content ===== */
-.post-content{
-  max-width:760px;
-  margin:auto;
-  font-size:18px;
+.file:last-child{
+  border-bottom:none;
 }
+
+.file:hover{
+  background:#f7faff;
+}
+
+.file .icon{
+  width:30px;
+  height:30px;
+  border-radius:6px;
+  background:#eef5ff;
+  color:$brand-color;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:.9rem;
+  font-weight:bold;
+}
+
+.file .name{
+  font-weight:600;
+}
+
+.file .meta,
+.file .size{
+  color:#828282;
+  font-size:.85rem;
+}
+
+/* Artikel */
+.post-content{
+  font-size:1.05rem;
+}
+
 .post-content h2,
-.post-content h3{margin:1.2em 0 .5em}
-.post-content p{margin-bottom:1em;color:#22303a}
+.post-content h3{
+  color:$text-color;
+  border-bottom:1px solid $border-color;
+  padding-bottom:.3rem;
+}
 
 /* Code */
 pre{
-  background:#f7f7f8;
-  border:1px solid #e5e5e7;
-  padding:1rem;
-  border-radius:12px;
-  overflow:auto;
-  font-size:.95rem;
+  background:#f6f8fa;
+  border:1px solid $border-color;
+  border-radius:8px;
 }
+
 code{
-  background:#f0f0f1;
-  padding:2px 6px;
-  border-radius:6px;
-  font-family:"JetBrains Mono","Fira Code",monospace;
-  font-size:.9em;
+  background:#f1f3f5;
+  border-radius:4px;
+  padding:.15em .35em;
 }
 
-/* ===== Related Posts ===== */
+/* Related */
 .related-list{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1rem;
 }
+
 .related-item{
-  flex:1 1 calc(33.333% - 12px);
-  min-width:200px;
-  padding:14px;
-  background:#fff;
-  border-radius:8px;
-  box-shadow:0 3px 10px rgba(0,0,0,.04);
-  text-decoration:none;
-  color:inherit;
-  transition:.2s ease;
-}
-.related-item:hover{transform:translateY(-4px)}
-
-/* ===== Footer ===== */
-footer{
-  margin:40px auto;
-  padding:16px;
-  text-align:center;
-  font-size:14px;
-  color:#6b7280;
-}
-footer a{color:#0969da;text-decoration:none}
-footer a:hover{text-decoration:underline}
-
-/* ===== Media ===== */
-img{
-  max-width:100%;
-  height:auto;
-  border-radius:8px;
   display:block;
+  border:1px solid $border-color;
+  border-radius:8px;
+  padding:1rem;
+  color:$text-color;
+  text-decoration:none;
+  transition:.2s;
 }
 
-/* ===== Responsive ===== */
-@media(max-width:768px){
-  .repo-info{grid-template-columns:1fr}
-  .file{grid-template-columns:24px 1fr}
-  .file .size{display:none}
-  .post-content{font-size:16px}
-  .related-item{flex:1 1 100%}
+.related-item:hover{
+  border-color:$brand-color;
+  box-shadow:0 4px 12px rgba(42,122,226,.12);
+}
+
+/* Gambar */
+img{
+  border-radius:8px;
+}
+
+/* Responsive */
+@media (max-width:768px){
+
+  .repo-info{
+    flex-direction:column;
+  }
+
+  .file{
+    grid-template-columns:30px 1fr;
+  }
+
+  .file .size{
+    display:none;
+  }
+
 }
