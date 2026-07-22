@@ -2,3 +2,182 @@
 ---
 
 @import "minima";
+
+
+/* ===== Base ===== */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  color:#0f1720;
+  background:linear-gradient(#f6f8fa,#fff);
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ===== Layout ===== */
+.container{
+  max-width:980px;
+  margin:24px auto;
+  padding:0 16px;
+}
+
+/* ===== Header ===== */
+header{
+  position:sticky;
+  top:0;
+  z-index:40;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 20px;
+  font-weight:600;
+  color:#fff;
+  background:linear-gradient(rgba(14,20,26,.95),rgba(36,41,47,.97));
+  backdrop-filter:blur(6px);
+}
+header a{color:inherit;text-decoration:none}
+header a:hover{text-decoration:underline}
+
+/* ===== Card ===== */
+.card{
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 4px 12px rgba(0,0,0,.05);
+  transition:.2s ease;
+}
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 24px rgba(0,0,0,.08);
+}
+
+/* ===== Repo / Post Header ===== */
+.repo-info{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:12px;
+  margin-bottom:16px;
+}
+.repo-info h1{
+  margin:0;
+  font-size:28px;
+  line-height:1.2;
+}
+.post-meta{
+  font-size:14px;
+  color:#6b7280;
+}
+
+/* ===== File List ===== */
+.file-list{
+  background:#fff;
+  padding:14px;
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,.05);
+}
+.file{
+  display:grid;
+  grid-template-columns:28px 1fr auto;
+  gap:12px;
+  padding:12px;
+  border-radius:8px;
+  text-decoration:none;
+  color:inherit;
+  transition:.15s ease;
+}
+.file + .file{margin-top:8px}
+.file:hover{
+  background:rgba(9,105,218,.05);
+  transform:translateY(-2px);
+}
+.file .icon{
+  display:grid;
+  place-items:center;
+  font-size:13px;
+  font-weight:600;
+  background:rgba(9,105,218,.1);
+  color:#0969da;
+  border-radius:6px;
+}
+.file .name{font-weight:600}
+.file .meta,
+.file .size{font-size:13px;color:#6b7280}
+
+/* ===== Article Content ===== */
+.post-content{
+  max-width:760px;
+  margin:auto;
+  font-size:18px;
+}
+.post-content h2,
+.post-content h3{margin:1.2em 0 .5em}
+.post-content p{margin-bottom:1em;color:#22303a}
+
+/* Code */
+pre{
+  background:#f7f7f8;
+  border:1px solid #e5e5e7;
+  padding:1rem;
+  border-radius:12px;
+  overflow:auto;
+  font-size:.95rem;
+}
+code{
+  background:#f0f0f1;
+  padding:2px 6px;
+  border-radius:6px;
+  font-family:"JetBrains Mono","Fira Code",monospace;
+  font-size:.9em;
+}
+
+/* ===== Related Posts ===== */
+.related-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.related-item{
+  flex:1 1 calc(33.333% - 12px);
+  min-width:200px;
+  padding:14px;
+  background:#fff;
+  border-radius:8px;
+  box-shadow:0 3px 10px rgba(0,0,0,.04);
+  text-decoration:none;
+  color:inherit;
+  transition:.2s ease;
+}
+.related-item:hover{transform:translateY(-4px)}
+
+/* ===== Footer ===== */
+footer{
+  margin:40px auto;
+  padding:16px;
+  text-align:center;
+  font-size:14px;
+  color:#6b7280;
+}
+footer a{color:#0969da;text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+/* ===== Media ===== */
+img{
+  max-width:100%;
+  height:auto;
+  border-radius:8px;
+  display:block;
+}
+
+/* ===== Responsive ===== */
+@media(max-width:768px){
+  .repo-info{grid-template-columns:1fr}
+  .file{grid-template-columns:24px 1fr}
+  .file .size{display:none}
+  .post-content{font-size:16px}
+  .related-item{flex:1 1 100%}
+}
