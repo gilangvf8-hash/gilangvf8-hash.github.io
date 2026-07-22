@@ -11,74 +11,55 @@
   {% include header.html %}
 <br>
 
-<article class="post h-entry" itemscope itemtype="https://schema.org/BlogPosting">
+    <!-- Page container -->
+  <main class="container" role="main">
+    <!-- Post header -->
+    <article class="card repo-info" itemscope itemtype="http://schema.org/Article">
+      <div>
+        <h1 itemprop="headline">{{ page.title }}</h1>
+        <div class="post-meta">
+          <span class="by">Oleh {% if page.author %}{{ page.author }}{% elsif site.author %}{{ site.author.name | default: site.author }}{% else %}Gilang V F{% endif %}</span>
+          • <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+          {% if page.categories and page.categories.size > 0 %} • <span style="color:#0969da; font-weight:600">{{ page.categories | join: ", " }}</span>{% endif %}
+        </div>
+      </div>
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="headline">
-      {{ page.title }}
-    </h1>
+      <div style="text-align:right;">
+        {% if page.reading_time %}
+          <div style="color:#6b7280; font-weight:600;">{{ page.reading_time }} menit baca</div>
+        {% endif %}
+      </div>
+    </article>
 
-    <p class="post-meta">
-      <time class="dt-published"
-            datetime="{{ page.date | date_to_xmlschema }}"
-            itemprop="datePublished">
-        {{ page.date | date: "%-d %B %Y" }}
-      </time>
+    <!-- Cover image -->
+    {% if page.image %}
+    <div class="post-cover">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title }} — cover image" />
+    </div>
+    {% endif %}
 
-      {% if page.author %}
-      • <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-        <span class="p-author h-card" itemprop="name">
-          {{ page.author }}
-        </span>
-      </span>
-      {% endif %}
+    <!-- Post content -->
+    <section class="file-list card">
+      <div class="post-content" itemprop="articleBody">
+        {{ content }}
+      </div>
+    </section>
 
-      {% if page.categories %}
-      • {{ page.categories | join: ", " }}
-      {% endif %}
+    <!-- Related posts (by first tag) -->
+    
+  </main>
 
-      {% if page.reading_time %}
-      • {{ page.reading_time }} menit baca
-      {% endif %}
-    </p>
-  </header>
-
-  {% if page.image %}
-  <div class="post-cover">
-    <img src="{{ page.image | relative_url }}"
-         alt="{{ page.title }}">
-  </div>
-  {% endif %}
-
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
-
-</article>
-
-<hr>
-
-<section class="related-posts">
+    <!-- Navigasi posting sebelumnya & selanjutnya -->
+    <div class="related-posts file-list">
   <h2>Postingan Lainnya</h2>
-
-  <ul class="post-list">
-    {% for post in site.posts limit:3 %}
-      {% unless post.url == page.url %}
-      <li>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title }}
-          </a>
-        </h3>
-
-        <span class="post-meta">
-          {{ post.date | date: "%-d %B %Y" }}
-        </span>
-      </li>
-      {% endunless %}
-    {% endfor %}
-  </ul>
-</section>
+  {% for post in site.posts limit:3 %}
+    {% if post.url != page.url %}
+      <div class="file">
+       ♦  <span><a href="{{ post.url | relative_url }}">{{ post.title }}</a></span>
+      </div>
+    {% endif %}
+  {% endfor %}
+    </div>
 
   {% include footer.html %}
 </body>
