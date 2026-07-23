@@ -1,10 +1,3 @@
----
-layout: post
-title: "Cara Membuat File di Github"
-description: "membuat file di github"
-keywords: "Github, blog, artikel"
-date: 2026-07-20
----
 
 # Cara Membuat File di GitHub
 
