@@ -1,5 +1,11 @@
+---
+layout: post
+title: "Cara Membuat File di GitHub"
+description: "GitHub adalah platform hosting kode berbasis Git yang paling banyak digunakan oleh developer di seluruh dunia. Salah satu aktivitas paling dasar yang perlu dikuasai saat menggunakan GitHub adalah membuat file baru, baik langsung melalui browser maupun melalui terminal (Git). Artikel ini akan membahas kedua cara tersebut secara lengkap."
+keywords: "cara membuat file di github"
+date: 2026-07-26
+---
 
-# Cara Membuat File di GitHub
 
 GitHub adalah platform hosting kode berbasis Git yang paling banyak digunakan oleh developer di seluruh dunia. Salah satu aktivitas paling dasar yang perlu dikuasai saat menggunakan GitHub adalah membuat file baru, baik langsung melalui browser maupun melalui terminal (Git). Artikel ini akan membahas kedua cara tersebut secara lengkap.
 
