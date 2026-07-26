@@ -2,7 +2,7 @@
 layout: post
 title: "Langkah Langkah Membuat Folder Post di Github"
 description: "membuat folder di github"
-keywords: "Github, blog, artikel"
+keywords: "cara membuat folder di github"
 date: 2025-09-19
 ---
 
