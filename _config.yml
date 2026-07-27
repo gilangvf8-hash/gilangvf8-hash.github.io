@@ -12,3 +12,10 @@ plugins:
 url: "https://gilangvf8-hash.github.io"
 paginate: 5
 paginate_path: "/page:num"
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
