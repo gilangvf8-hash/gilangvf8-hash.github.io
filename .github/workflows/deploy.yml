@@ -1,4 +1,4 @@
-name: Deploy GitHub Pages with Functions
+name: Deploy GitHub Pages with HTML Minify
 
 on:
   push:
@@ -22,17 +22,35 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
         with:
-          ruby-version: "3.3"
-          bundler-cache: true
+          source: ./
+          destination: ./_site
 
-      - name: Install dependencies
-        run: bundle install
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
 
-      - name: Build Jekyll
-        run: bundle exec jekyll build --destination ./_site
+      - name: Install HTML Minifier
+        run: npm install -g html-minifier-terser
+
+      - name: Minify HTML
+        run: |
+          find ./_site -name "*.html" -print0 | while IFS= read -r -d '' file
+          do
+            html-minifier-terser \
+              --collapse-whitespace \
+              --remove-comments \
+              --remove-redundant-attributes \
+              --remove-script-type-attributes \
+              --remove-style-link-type-attributes \
+              --use-short-doctype \
+              --minify-css true \
+              --minify-js true \
+              -o "$file" "$file"
+          done
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
