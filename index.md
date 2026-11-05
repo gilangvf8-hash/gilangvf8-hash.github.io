@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "gilangvf8-hash"
+title: "Gilang V F"
 permalink: /index.html
 description: "Dokumentasi tentang keruntuhan Hizbut Tahrir"
 keywords: "GitHub, Web, Situs, Blog"
